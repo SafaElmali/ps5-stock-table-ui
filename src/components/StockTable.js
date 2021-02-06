@@ -1,13 +1,12 @@
 import { Table, Thead, Tbody, Tr, Th, Td, Link } from "@chakra-ui/react";
-import { useState } from "react";
+// import { useState } from "react";
 import { Badge } from "@chakra-ui/react";
 import { STATUS_TEXT } from "../utils/constants";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import useSound from 'use-sound';
+// import useSound from 'use-sound';
 
 const StockTable = () => {
-  const [colorStatus, setColorStatus] = useState(null);
-
+  // const [colorStatus, setColorStatus] = useState(null);
 
   return (
     <Table variant="simple" className="table">
