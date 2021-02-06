@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Box, ChakraProvider, Flex, Image, Text } from "@chakra-ui/react";
 import StockTable from "./components/StockTable";
 import "./App.css";
