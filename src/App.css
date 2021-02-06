@@ -61,3 +61,14 @@
     flex-direction: column;
   }
 }
+
+.badge {
+  position: relative;
+  display: inline-flex !important;
+  flex-direction: row;
+  align-items: center;
+}
+
+.css-hykeff {
+  border-bottom: none !important;
+}

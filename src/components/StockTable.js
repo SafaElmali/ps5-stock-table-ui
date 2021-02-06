@@ -24,6 +24,7 @@ const StockTable = () => {
           <Td>Blu-Ray Versiyon</Td>
           <Td>
             <Link
+              isExternal
               href={
                 "https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html"
               }
@@ -43,6 +44,7 @@ const StockTable = () => {
           <Td>Digital Versiyon</Td>
           <Td>
             <Link
+              isExternal
               href={
                 "https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html"
               }
@@ -62,6 +64,7 @@ const StockTable = () => {
           <Td>Blu-Ray Versiyon</Td>
           <Td>
             <Link
+              isExternal
               href={
                 "https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html"
               }
@@ -81,6 +84,7 @@ const StockTable = () => {
           <Td>Digital Versiyon</Td>
           <Td>
             <Link
+              isExternal
               href={
                 "https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html"
               }
@@ -100,6 +104,7 @@ const StockTable = () => {
           <Td>Blu-Ray Versiyon</Td>
           <Td>
             <Link
+              isExternal
               href={
                 "https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html"
               }
@@ -119,6 +124,7 @@ const StockTable = () => {
           <Td>Digital Versiyon</Td>
           <Td>
             <Link
+              isExternal
               href={
                 "https://www.vatanbilgisayar.com/sony-playstation-5-oyun-konsolu.html"
               }
