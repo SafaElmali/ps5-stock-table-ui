@@ -10,7 +10,6 @@ import ring from "../assets/sound/ring.mp3";
 const StockTable = ({ data = [] }) => {
   const [play] = useSound(ring);
 
-  console.log(data);
   return (
     <Table variant="simple" className="table">
       <Thead>
@@ -23,7 +22,7 @@ const StockTable = ({ data = [] }) => {
       </Thead>
       <Tbody>
         {data.length
-          ? data.map((item) => {
+          ? data.map((item, index) => {
               const version = checkDeviceType(item.isDigital);
               const color = checkStatusColor(item.status);
               const status = checkStatusText(item.status);
@@ -31,7 +30,7 @@ const StockTable = ({ data = [] }) => {
                 play();
               }
               return (
-                <Tr>
+                <Tr key={index}>
                   <Td>{item.site}</Td>
                   <Td>{version}</Td>
                   <Td>

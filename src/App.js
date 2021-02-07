@@ -13,17 +13,18 @@ function App() {
 
   useEffect(() => {
     loadData();
+
+    setInterval(() => {
+      loadData();
+    }, 15000);
   }, []);
 
-  const loadData = () => {
+  const loadData = async () => {
     try {
-      setInterval(async () => {
-        const res = await fetch("http://localhost:3000/stocks");
-        const stockData = await res.json();
-        console.log(stockData);
-        setStockData(stockData);
-        setLoading(false);
-      }, 15000);
+      const res = await fetch("http://localhost:3000/stocks");
+      const stockData = await res.json();
+      setStockData(stockData);
+      setLoading(false);
     } catch (err) {
       toast.error(err);
     }
