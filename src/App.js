@@ -4,7 +4,7 @@ import StockTable from "./components/StockTable";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "./App.css";
 import moment from "moment";
 import "moment/locale/tr";
@@ -24,7 +24,7 @@ function App() {
 
   const loadData = async () => {
     try {
-      const res = await fetch("https://peaceful-savannah-45045.herokuapp.com/stocks");
+      const res = await fetch("http://localhost:3000/stocks");
       const stockData = await res.json();
       setStockData(stockData);
       setTime(moment().calendar());
@@ -53,17 +53,6 @@ function App() {
       <Box alignItems="center">
         <StockTable data={stockData} />
       </Box>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </Box>
   );
 }
