@@ -1,5 +1,5 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import Bell from "../assets/images/bell.svg";
+// import Bell from "../assets/images/bell.svg";
 import Astro from "../assets/images/astro.png";
 
 const Header = ({ time }) => {
@@ -28,12 +28,12 @@ const Header = ({ time }) => {
       >
         <Text>Aşağıdaki tablodan stok durumunu takip edebilirsiniz.</Text>
         <Text>Her 15 saniyede bir tabloda güncelleme gerçekleşmektedir.</Text>
-        <Flex className="subtitle__flex">
+        {/* <Flex className="subtitle__flex">
           <Text>
             Herhangi bir mağazada stok olması durumunda zil çalacaktır.
           </Text>
           <Image ml={4} src={Bell} width={"30px"} height={"30px"} />
-        </Flex>
+        </Flex> */}
         <Text mt={5}>Son Güncelleme saati : {time || "-"}</Text>
       </Box>
     </Box>

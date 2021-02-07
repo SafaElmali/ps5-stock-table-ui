@@ -7,9 +7,9 @@ import PacmanLoader from "react-spinners/PacmanLoader";
 import { toast } from "react-toastify";
 import "./App.css";
 import moment from "moment";
-import "moment/locale/tr";
+import localization from 'moment/locale/tr'
 
-function App() {
+const App = () => {
   const [stockData, setStockData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [time, setTime] = useState(null);
@@ -27,7 +27,8 @@ function App() {
       const res = await fetch("http://localhost:3000/stocks");
       const stockData = await res.json();
       setStockData(stockData);
-      setTime(moment().calendar());
+      moment.locale("tr");
+      setTime(moment().locale("tr",localization).format("LTS"));
       setLoading(false);
     } catch (err) {
       toast.error(err);
@@ -42,6 +43,7 @@ function App() {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        flexDirection="column"
       >
         <PacmanLoader size={75} color={"#0080FF"} />
       </Box>
@@ -55,7 +57,7 @@ function App() {
       </Box>
     </Box>
   );
-}
+};
 
 export default () => (
   <ChakraProvider>
