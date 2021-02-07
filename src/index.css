@@ -4,18 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-html {
-  min-height: 100vh;
-}
-
 @font-face {
   font-family: "PlayGreat";
-  src: local("PlayGreat"),
-    url("./assets/Fonts/PlayGreatBold-8MgEZ.ttf");
+  src: local("PlayGreat"), url("./assets/Fonts/PlayGreatBold-8MgEZ.ttf");
   font-weight: normal;
 }
