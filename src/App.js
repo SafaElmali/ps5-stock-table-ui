@@ -9,7 +9,7 @@ function App() {
     <Box className="sony-bg">
       <Header />
       <Box alignItems="center">
-        <StockTable />;
+        <StockTable />
       </Box>
     </Box>
   );
