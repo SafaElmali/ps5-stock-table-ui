@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const Crawler = require("crawler");
+const cors = require('cors')
+app.use(cors());
+
 const port = 3000;
 var resList = [];
 
@@ -26,7 +29,7 @@ app.get('/', async (req, res) => {
     res.send("Server initialized");
 })
 
-getVatanData = (vatanUrl) => {
+const getVatanData = (vatanUrl) => {
     return new Promise((resolve, reject) => {
         const craw = new Crawler({
             maxConnections: 10,
@@ -61,7 +64,7 @@ getVatanData = (vatanUrl) => {
     });
 }
 
-getTeknosaData = (teknosaUrl) => {
+const getTeknosaData = (teknosaUrl) => {
     return new Promise((resolve, reject) => {
         const craw = new Crawler({
             maxConnections: 10,
@@ -94,7 +97,7 @@ getTeknosaData = (teknosaUrl) => {
     });
 }
 
-getMediamarktData = (mediaMarktUrl) => {
+const getMediamarktData = (mediaMarktUrl) => {
     return new Promise((resolve, reject) => {
         const craw = new Crawler({
             maxConnections: 10,
@@ -127,7 +130,7 @@ getMediamarktData = (mediaMarktUrl) => {
     });
 }
 
-prepareResult = (list) => {
+const prepareResult = (list) => {
     const resList = JSON.stringify(list);
     resList.replace("ResponseModel", "");
 
