@@ -6,10 +6,13 @@ import { useEffect, useState } from "react";
 import CircleLoader from "react-spinners/CircleLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
+import moment from "moment";
+import 'moment/locale/tr';
 
 function App() {
   const [stockData, setStockData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [time, setTime] = useState(null);
 
   useEffect(() => {
     loadData();
@@ -24,6 +27,7 @@ function App() {
       const res = await fetch("http://localhost:3000/stocks");
       const stockData = await res.json();
       setStockData(stockData);
+      setTime(moment().calendar());
       setLoading(false);
     } catch (err) {
       toast.error(err);
@@ -34,7 +38,7 @@ function App() {
 
   return (
     <Box className="sony-bg">
-      <Header />
+      <Header time={time} />
       <Box alignItems="center">
         <StockTable data={stockData} />
       </Box>
