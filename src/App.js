@@ -34,7 +34,7 @@ function App() {
     }
   };
 
-  if (!loading)
+  if (loading)
     return (
       <Box
         minHeight="100vh"
