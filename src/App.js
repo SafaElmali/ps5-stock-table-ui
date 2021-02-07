@@ -18,8 +18,9 @@ function App() {
   const loadData = () => {
     try {
       setInterval(async () => {
-        const res = await fetch("");
+        const res = await fetch("http://localhost:3000/stocks");
         const stockData = await res.json();
+        console.log(stockData);
         setStockData(stockData);
         setLoading(false);
       }, 15000);
@@ -28,7 +29,7 @@ function App() {
     }
   };
 
-  // if (loading) return <CircleLoader  size={100} />;
+  if (loading) return <CircleLoader size={100} />;
 
   return (
     <Box className="sony-bg">

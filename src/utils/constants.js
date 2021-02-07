@@ -1,7 +1,12 @@
 export const STATUS_TEXT = {
-  SOLD_OUT: "Tükendi",
-  NOT_LISTED: "Henüz Listelenmedi",
-  ON_SALE: "Satışa Çıktı!",
-  UNKNOWN: "Durum Belirsiz",
+  0: "Tükendi",
+  1: "Henüz Listelenmedi",
+  2: "Satışa Çıktı!",
+  3: "Durum Belirsiz",
+};
 
+export const DEVICE_TYPE = {
+  0: "Blu Ray Versiyon",
+  1: "Digital Versiyon",
+  2: "Bilinmeyen",
 };
