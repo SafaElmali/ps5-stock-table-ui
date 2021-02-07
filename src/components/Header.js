@@ -13,7 +13,7 @@ const Header = () => {
         <Text fontFamily="sans-serif" fontWeight="bold">
           Stok Durumu
         </Text>
-        <Image src={Astro} width={100} height={100} className="astro" />
+        <Image src={Astro} width={100} height={100} className="astro" border="none" />
       </Flex>
       <Box
         className="header__subtitle"

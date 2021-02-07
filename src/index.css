@@ -15,6 +15,10 @@ body {
 
 @font-face {
   font-family: "PlayGreat";
-  src: local("PlayGreat"), url("./assets/Fonts/PlayGreatBold-8MgEZ.ttf");
+  src: local("PlayGreat"), url("./assets/Fonts/PlayGreatBold.ttf") format("truetype");
   font-weight: normal;
+  /* How to avoid showing invisible text 
+   * https://web.dev/font-display/?utm_source=lighthouse&utm_medium=unknown#how-to-avoid-showing-invisible-text
+   */
+  font-display: swap;
 }
