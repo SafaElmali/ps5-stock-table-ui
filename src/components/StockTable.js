@@ -17,11 +17,10 @@ const StockTable = ({ data = [] }) => {
       <Tbody>
         {data.length
           ? data.map((item, index) => {
-            console.log(item)
               const version = checkDeviceType(item.isDigital);
               const color = checkStatusColor(item.status);
               const status = checkStatusText(item.status);
-             
+
               return (
                 <Tr key={index}>
                   <Td>{item.site}</Td>
