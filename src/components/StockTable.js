@@ -8,7 +8,7 @@ import useSound from "use-sound";
 import ring from "../assets/sound/ring.mp3";
 
 const StockTable = ({ data = [] }) => {
-  const [play, { stop }] = useSound(ring);
+  const [play] = useSound(ring);
 
   console.log(data);
   return (
