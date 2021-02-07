@@ -3,9 +3,13 @@ import { Table, Thead, Tbody, Tr, Th, Td, Link } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { checkDeviceType, checkStatusText, checkStatusColor } from "../utils";
-// import useSound from 'use-sound';
+import useSound from "use-sound";
+
+import ring from "../assets/sound/ring.mp3";
 
 const StockTable = ({ data = [] }) => {
+  const [play, { stop }] = useSound(ring);
+
   console.log(data);
   return (
     <Table variant="simple" className="table">
@@ -23,6 +27,9 @@ const StockTable = ({ data = [] }) => {
               const version = checkDeviceType(item.isDigital);
               const color = checkStatusColor(item.status);
               const status = checkStatusText(item.status);
+              if (!item.status === 2) {
+                play();
+              }
               return (
                 <Tr>
                   <Td>{item.site}</Td>
