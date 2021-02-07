@@ -14,3 +14,7 @@
 ## How To Run The Project
 
 - In theroot folder run ```npm run start```
+
+## License
+
+ps5-stock-table-ui is [MIT licensed](./LICENSE).
