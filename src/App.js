@@ -24,7 +24,7 @@ const App = () => {
 
   const loadData = async () => {
     try {
-      const res = await fetch("http://localhost:3000/stocks");
+      const res = await fetch("http://localhost:4000/stocks");
       const stockData = await res.json();
       setStockData(stockData);
       moment.locale("tr");
