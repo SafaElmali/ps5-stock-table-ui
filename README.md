@@ -8,9 +8,10 @@
   
 ![](https://user-images.githubusercontent.com/17435062/107844119-dd221680-6de1-11eb-8286-a610de6703e1.png) 
   
-<i>Please install the server side to fetch table data</i>
 
 </div>
+
+<i>Please install the [server side](https://github.com/SafaElmali/ps5-stock-table-server) to fetch table data</i>
 
 ## How To Install ? 
 
