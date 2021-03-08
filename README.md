@@ -18,7 +18,7 @@
 
 ## How To Run The Project
 
-- In theroot folder run ```npm run start```
+- In the root folder run ```npm run start```
 
 ## License
 
