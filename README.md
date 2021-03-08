@@ -11,7 +11,9 @@
 
 </div>
 
-<i>Please install the [server side](https://github.com/SafaElmali/ps5-stock-table-server) to fetch table data</i>
+## Prerequisite
+
+- Please install the [server side](https://github.com/SafaElmali/ps5-stock-table-server) to fetch table data
 
 ## How To Install ? 
 
